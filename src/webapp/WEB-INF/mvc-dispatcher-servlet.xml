@@ -10,9 +10,10 @@
 
     <mvc:annotation-driven/>
 
-    <mvc:view-resolvers>
-        <mvc:jsp prefix="/resources/views/" suffix=".jsp"></mvc:jsp>
-    </mvc:view-resolvers>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/resources/views/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 

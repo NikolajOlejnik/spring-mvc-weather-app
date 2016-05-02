@@ -9,7 +9,7 @@ public class WeatherService {
 
     private static JsonWeatherParser parser = new JsonWeatherParser();
 
-    public Weather convertWeatherFromJson (String json) throws ParseException {
+    public Weather getWeatherFromJson(String json) throws ParseException {
         return parser.getWeather(json);
     }
 }

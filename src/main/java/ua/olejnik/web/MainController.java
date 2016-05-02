@@ -26,7 +26,8 @@ public class MainController {
 
     @RequestMapping(value = "/getWeather" , method = RequestMethod.POST)
     public @ResponseBody Weather getWeather (@RequestBody String json) throws ParseException {
-        return weatherService.convertWeatherFromJson(json);
+        Weather weather = weatherService.getWeatherFromJson(json);
+        return weather;
     }
 
 }
