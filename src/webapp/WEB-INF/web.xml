@@ -54,7 +54,7 @@
     </filter-mapping>
 
     <error-page>
-        <city>/error</city>
+        <location>/error</location>
     </error-page>
 
 </web-app>

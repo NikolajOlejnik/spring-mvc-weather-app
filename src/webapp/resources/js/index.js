@@ -36,10 +36,11 @@ function sendToSpringController(data) {
         timeout : 100000,
         success : function(data) {
             console.log("SUCCESS: ", data);
+            showHideArea();
             display(data);
             $('#error-field').text('');
         },
-        error : function(e) {
+        error : function() {
             displayError();
         }
     });
@@ -48,12 +49,18 @@ function display(data) {
     var temp = JSON.stringify(data.temperature).concat(" °C");
     var location = "Current weather in " + JSON.stringify(data.city);
     var description = JSON.stringify(data.description);
+    var wind = JSON.stringify(data.wind);
 
-    $('#temp').text(temp.replace(/\"/g, ""));
-    $('#description').text(description.replace(/\"/g, ""));
-    $('#city-name').text(location.replace(/\"/g, ""));
+    $('#temp').text(temp.replace(/"/g, ""));
+    $('#description').text(description.replace(/"/g, ""));
+    $('#city-name').text(location.replace(/"/g, ""));
+    $('#wind').text(wind.replace(/"/g, ""));
 }
 
 function displayError() {
     $('#error-field').text("Enter correct city").css('color','red');
+}
+
+function showHideArea() {
+    $('#hide-area').show();
 }

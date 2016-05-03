@@ -15,19 +15,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/")
 public class MainController {
 
-    private final String MAIN_PAGE = "index";
-
-    private static WeatherService weatherService = new WeatherService();
+    private static final WeatherService weatherService = new WeatherService();
 
     @RequestMapping(method = RequestMethod.GET)
     public String getMainPage () {
-        return MAIN_PAGE;
+        return "index";
     }
 
     @RequestMapping(value = "/getWeather" , method = RequestMethod.POST)
     public @ResponseBody Weather getWeather (@RequestBody String json) throws ParseException {
-        Weather weather = weatherService.getWeatherFromJson(json);
-        return weather;
+        return weatherService.getWeatherFromJson(json);
     }
 
 }
