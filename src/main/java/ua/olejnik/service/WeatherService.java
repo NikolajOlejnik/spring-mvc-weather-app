@@ -33,7 +33,7 @@ public class WeatherService {
     private String getJsonFromServer (String city) throws IOException {
 
         String result="";
-        
+
         URL url = new URL ("http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=18941878d8bee31166d6201ef9886fb2");
         URLConnection urlConnection = url.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(
