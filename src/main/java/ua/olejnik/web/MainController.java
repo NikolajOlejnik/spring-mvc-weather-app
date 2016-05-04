@@ -6,10 +6,13 @@ import main.java.ua.olejnik.service.WeatherService;
 import org.json.simple.parser.ParseException;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 
 @Controller
 @RequestMapping(value = "/")
@@ -22,9 +25,9 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping(value = "/getWeather" , method = RequestMethod.POST)
-    public @ResponseBody Weather getWeather (@RequestBody String json) throws ParseException {
-        return weatherService.getWeatherFromJson(json);
+    @RequestMapping(value = "/weather/{city}", method = RequestMethod.POST)
+    public @ResponseBody Weather weather (@PathVariable (value = "city") String city) throws IOException, ParseException {
+        return weatherService.getWeather(city);
     }
 
 }
