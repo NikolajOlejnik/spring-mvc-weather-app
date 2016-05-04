@@ -2,7 +2,9 @@ package main.java.ua.olejnik.util;
 
 class DegreesToDirectionConverter {
 
-    public static String convert (Double degrees) {
+    public static String convert (String stringDegrees) {
+
+        Double degrees = Double.valueOf(stringDegrees);
 
         if (degrees >= 11.25 && degrees <= 33.75){
 

@@ -31,10 +31,9 @@ public class JsonWeatherParser {
                 .concat(String.valueOf(countryObject.get("country"))));
 
         weather.setDescription(String.valueOf(descriptionObject.get("description")));
-
         weather.setTemperature(KelvinToCelsiusConverter.convert((Double) mainArray.get("temp")));
 
-        weather.setWind(DegreesToDirectionConverter.convert((Double) windArray.get("deg"))
+        weather.setWind(DegreesToDirectionConverter.convert(String.valueOf(windArray.get("deg")))
                 .concat(", ")
                 .concat(String.valueOf(windArray.get("speed")))
                 .concat(" m/s"));
