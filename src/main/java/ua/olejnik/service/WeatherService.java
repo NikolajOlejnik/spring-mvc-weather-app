@@ -8,15 +8,12 @@ import org.json.simple.parser.ParseException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
 public class WeatherService {
 
     private static final JsonWeatherParser parser = new JsonWeatherParser();
-
-    private static URLConnection urlConnection;
 
     public Weather getWeather (String city) throws IOException, ParseException {
 
