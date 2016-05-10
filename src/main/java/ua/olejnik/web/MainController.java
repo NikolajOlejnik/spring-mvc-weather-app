@@ -17,7 +17,7 @@ import java.io.IOException;
 @RequestMapping(value = "/")
 public class MainController {
 
-    private static final WeatherService weatherService = new WeatherService();
+    private final WeatherService weatherService = new WeatherService();
 
     @RequestMapping(method = RequestMethod.GET)
     public String getMainPage() {
