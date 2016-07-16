@@ -16,11 +16,9 @@ function sendWeatherRequest() {
         dataType : 'json',
         timeout : 100000,
         success : function(data) {
-            console.log("SUCCESS: ", data);
             renderResponse(data);
         },
         error : function(e) {
-            console.log("ERROR: ", e);
             displayError(e);
         }
     });
