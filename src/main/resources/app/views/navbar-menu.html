@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Get Weather</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li ng-class="{ active: isActive('/current-weather')}">
+                <a href="#!/current-weather">Current Weather</a>
+            </li>
+            <li ng-class="{ active: isActive('/about')}">
+                <a href="#!/about">About</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="https://www.linkedin.com/in/nikolajolejnik"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/NikolajOlejnik"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
