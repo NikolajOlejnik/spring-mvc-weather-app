@@ -1,5 +1,6 @@
 package ua.olejnik.web;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import ua.olejnik.domain.Weather;
 import ua.olejnik.service.WeatherService;
 import org.json.simple.parser.ParseException;
@@ -14,10 +15,16 @@ import java.io.IOException;
 @Controller
 @RequestMapping(value = "/weather")
 public class WeatherController {
-    private final WeatherService weatherService = new WeatherService();
+
+    private final WeatherService weatherService;
+
+    @Autowired
+    public WeatherController(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
 
     @RequestMapping(params = {"city"}, method = RequestMethod.GET)
-    public @ResponseBody Weather weather(@RequestParam(value = "city") String city) throws IOException, ParseException {
-        return weatherService.getWeather(city);
+    public @ResponseBody Weather currentWeather(@RequestParam(value = "city") String city) throws IOException, ParseException {
+        return weatherService.getCurrentWeather(city);
     }
 }
