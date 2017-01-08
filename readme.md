@@ -1,4 +1,4 @@
-Simple single page web-application. Last version: `2.0.0`
+Simple single page web-application. Last version: `2.0.1`
 
 Demo: [weather-demo.herokuapp.com/](https://weather-demo.herokuapp.com/)
 
