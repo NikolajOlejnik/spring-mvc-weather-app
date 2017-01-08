@@ -12,7 +12,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="/resources/app/app.js"></script>
+    <script src="app/app.js"></script>
 
 </head>
 
@@ -26,7 +26,7 @@
 
             <form class="form-inline" id="search-form" name="searchForm" ng-submit="getWeather(city)" novalidate>
                 <div class="form-group">
-                    <input type=text class="form-control" id="city" name="city" ng-model="city" placeholder="enter city..." required>
+                    <input type="text" class="form-control" id="city" name="city" ng-model="city" placeholder="enter city..." required>
                     <button type="submit" id="bth-search"
                             class="btn btn-primary">Search
                     </button>
@@ -72,10 +72,10 @@
 
 
     <div class="jumbotron">
-        <b>Technologies:</b> Spring MVC 4.2.5, AngularJS 1.6.1, jQuery 1.12.0, Twitter Bootstrap 3.3.6 <br/>
+        <b>Technologies:</b> Spring Boot 1.4.3, AngularJS 1.6.1, jQuery 1.12.0, Twitter Bootstrap 3.3.6 <br/>
         <b>Weather Source:</b> <a href="http://openweathermap.org/">OpenWeatherMap API</a> <br/>
         <b>Author:</b> <a href="https://github.com/NikolajOlejnik"> Nikolaj Olejnik </a> <br/>
-        <b>Version:</b> 1.2.0
+        <b>Version:</b> 2.0.0
     </div>
 
     </div>

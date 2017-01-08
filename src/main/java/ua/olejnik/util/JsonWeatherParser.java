@@ -1,6 +1,6 @@
-package main.java.ua.olejnik.util;
+package ua.olejnik.util;
 
-import main.java.ua.olejnik.domain.Weather;
+import ua.olejnik.domain.Weather;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

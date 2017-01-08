@@ -1,4 +1,4 @@
-package main.java.ua.olejnik.util;
+package ua.olejnik.util;
 
 class DegreesToDirectionConverter {
     public static String convert(String stringDegrees) {

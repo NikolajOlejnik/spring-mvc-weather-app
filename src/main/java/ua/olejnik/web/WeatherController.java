@@ -1,7 +1,7 @@
-package main.java.ua.olejnik.web;
+package ua.olejnik.web;
 
-import main.java.ua.olejnik.domain.Weather;
-import main.java.ua.olejnik.service.WeatherService;
+import ua.olejnik.domain.Weather;
+import ua.olejnik.service.WeatherService;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

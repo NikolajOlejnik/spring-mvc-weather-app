@@ -1,7 +1,7 @@
-package main.java.ua.olejnik.service;
+package ua.olejnik.service;
 
-import main.java.ua.olejnik.domain.Weather;
-import main.java.ua.olejnik.util.JsonWeatherParser;
+import ua.olejnik.domain.Weather;
+import ua.olejnik.util.JsonWeatherParser;
 
 import org.json.simple.parser.ParseException;
 
