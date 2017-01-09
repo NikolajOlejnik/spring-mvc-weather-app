@@ -2,17 +2,9 @@
     <h4>Current weather</h4>
 </div>
 
-<form class="form-inline" id="search-form" name="searchForm" ng-submit="getWeather(city)" novalidate>
-    <div class="form-group">
-        <input type="text" class="form-control" id="city" name="city" ng-model="city" placeholder="enter city..." required ng-minlength="2" ng-maxlength="20">
-        <button type="submit" id="bth-search"
-                class="btn btn-primary" ng-disabled="searchForm.$invalid">Search
-        </button>
-    </div>
-    <div class="alert alert-danger" ng-if="showError">
-        Server error. Please try again.
-    </div>
-</form>
+<div class="alert alert-danger" ng-if="showError">
+    No data available. Please choose another city or try again later.
+</div>
 
 <div id="weather-area" ng-if="weatherAvailable">
 

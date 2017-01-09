@@ -13,6 +13,10 @@
                     templateUrl: 'app/views/current-weather.html',
                     controller: 'WeatherController'
                 })
+                .when('/current-weather/:city', {
+                    templateUrl: 'app/views/current-weather.html',
+                    controller: 'WeatherController'
+                })
                 .when('/about', {
                     templateUrl: 'app/views/about.html'
                 })

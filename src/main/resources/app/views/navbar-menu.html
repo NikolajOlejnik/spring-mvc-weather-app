@@ -3,10 +3,13 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Get Weather</a>
         </div>
+        <form class="navbar-form navbar-left" id="search-form" name="searchForm" ng-submit="getWeather(city)" novalidate>
+            <div class="form-group">
+                <input type="text" class="form-control" id="city" name="city" ng-model="city" placeholder="enter city..." required ng-minlength="2" ng-maxlength="20">
+            </div>
+            <button type="submit" class="btn btn-default" ng-disabled="searchForm.$invalid">Search</button>
+        </form>
         <ul class="nav navbar-nav">
-            <li ng-class="{ active: isActive('/current-weather')}">
-                <a href="#!/current-weather">Current Weather</a>
-            </li>
             <li ng-class="{ active: isActive('/about')}">
                 <a href="#!/about">About</a>
             </li>
