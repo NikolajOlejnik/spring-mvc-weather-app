@@ -27,7 +27,7 @@
             $scope.getWeather = function (city) {
 
                 $http.get('/weather', {
-                    params: {city: city}
+                    params: {city: encodeURI(city)}
                 }).then(function (response) {
                     $scope.showError = false;
                     $scope.weather = response.data;

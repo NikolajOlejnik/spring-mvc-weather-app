@@ -1,20 +1,16 @@
-<div class="page-header">
-    <h4>Current weather</h4>
-</div>
-
 <div class="alert alert-danger" ng-if="showError">
     No data available. Please choose another city or try again later.
 </div>
 
 <div id="weather-area" ng-if="weatherAvailable">
 
+    <div class="page-header">
+        <h4>Current weather in {{weather.city}}</h4>
+    </div>
+
     <div id="weather-table">
 
         <table class="table table-striped table-bordered">
-
-            <thead>
-            <strong><div class="panel-heading" id="city-name">{{weather.city}}</div></strong>
-            </thead>
             <tbody>
             <tr>
                 <td><b>Temperature</b></td>
