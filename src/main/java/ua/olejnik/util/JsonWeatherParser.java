@@ -47,8 +47,8 @@ public class JsonWeatherParser {
     }
 
     private String getTemperatureDescription(JSONObject jsonObject) {
-        return String.valueOf(new KelvinToCelsiusConverter(
-                (Double) (jsonObject.get("temp"))).getCelsiusString());
+        Double temp = new Double(jsonObject.get("temp").toString());
+        return (temp > 0 ? "+" : "") + String.valueOf(Math.round(temp));
     }
 
     private String getWindDescription(JSONObject jsonObject) {

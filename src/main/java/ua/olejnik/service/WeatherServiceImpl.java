@@ -35,7 +35,8 @@ public class WeatherServiceImpl implements WeatherService{
         URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q="
                 + city
                 + "&APPID="
-                + AppID);
+                + AppID
+                + "&units=metric");
         URLConnection urlConnection = url.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(
                 urlConnection.getInputStream()));
